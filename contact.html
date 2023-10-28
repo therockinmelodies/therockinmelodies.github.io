@@ -60,7 +60,9 @@
             <input type="tel" id="phone" name="phone">
             <label for="email">E-mailadres</label>
             <input type="email" id="email" name="email" required>
-            <label for="genre">Welk muziek genre wenst u</label>
+            <label for="plaats">Plaats</label>
+            <input type="plaats" id="plaats" name="plaats" required>
+            <label id="genre" for="genre">Welk muziek genre wenst u</label>
             <select id="genre" name="genre">
                 <option value="Country Rock">Country (rock)</option>
                 <option value="Country En Golden Oldies">Country & Golden Oldies</option>
@@ -102,6 +104,7 @@
             const last_name = document.getElementById('last_name').value;
             const phone = document.getElementById('phone').value;
             const email = document.getElementById('email').value;
+            const plaats = document.getElementById('plaats').value;
             const genre = document.getElementById('genre').value;
             const event_type = document.getElementById('event_type').value;
             const event_time = document.getElementById('event_time').value;
@@ -116,6 +119,7 @@
                             `Achternaam: ${last_name}\n\n` +
                             `Telefoonnummer: ${phone}\n\n` +
                             `E-mailadres: ${email}\n\n` +
+                            `Plaats: ${plaats}\n\n` +
                             `Genre: ${genre}\n\n` +
                             `Event Type: ${event_type}\n\n` +
                             `Aanvang uur optreden / tot: ${event_time}\n\n` +
