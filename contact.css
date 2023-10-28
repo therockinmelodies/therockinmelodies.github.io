@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('The Rockin Melodies.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-shadow: none;
+    color: #0d638f;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the menu horizontally */
+}
+
+.ace-responsive-menu {
+    background: #333;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.ace-responsive-menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.ace-responsive-menu li ul {
+    display: none;
+}
+
+.ace-responsive-menu>li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.ace-responsive-menu li a {
+    color: #c0c0c0;
+}
+
+.ace-responsive-menu>li>a {
+    display: block;
+    position: relative;
+    margin: 0;
+    border: 0;
+    padding: 18px 20px 18px 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+    color: #c0c0c0;
+}
+
+.ace-responsive-menu li a i {
+    padding-right: 5px;
+    color: #FF5737;
+}
+
+.ace-responsive-menu>li>a i {
+    font-size: 16px;
+    text-shadow: none;
+    color: #FF5737;
+}
+
+.ace-responsive-menu li.menu-active>a {
+    background: #272727;
+    color: #fff;
+}
+
+.ace-responsive-menu li .menu-active {
+    position: relative;
+}
+
+.ace-responsive-menu>li>a>.arrow:before {
+    margin-left: 15px;
+    display: inline;
+    font-size: 16px;
+    font-family: FontAwesome;
+    height: auto;
+    content: " \276F";
+    font-weight: 300;
+    text-shadow: none;
+    width: 10px;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+ul[data-menu-style="accordion"] {
+    width: 250px;
+}
+
+ul[data-menu-style="accordion"]>li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    float: none !important;
+}
+
+ul[data-menu-style="accordion"]>li:first-child {
+    border-top: 2px solid #FD5025;
+}
+
+ul[data-menu-style="accordion"]>li>a>.arrow:before {
+    float: right;
+    content: "\f105";
+}
+
+ul[data-menu-style="accordion"] li.menu-active>a>.arrow:before {
+    content: "\f107" !important;
+}
+
+ul[data-menu-style="accordion"]>li>a i {
+    padding-right: 10px;
+    color: #FF5737;
+}
+
+.fb-share-button {
+    width: 60px;
+    height: 30px;
+    margin-left: 10px;
+    top: 11px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: absolute; /* Add this line to make it position absolute */
+}
+
+.fb-share-button a {
+    color: white;
+    font-size: small;
+    text-decoration: none;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#contact-form h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contact-form p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 11.6px;
+}
+
+#contact-form select,
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 11.6px;
+}
+
+#contact-form textarea {
+    height: 50px;
+}
+
+#contact-form input[type="submit"] {
+    background-color: #FF5737;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #FF4214;
+}

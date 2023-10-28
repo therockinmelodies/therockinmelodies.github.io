@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('The Rockin Melodies.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-shadow: none;
+    color: #0d638f;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* Center the menu horizontally */
+}
+
+.ace-responsive-menu {
+    background: #333;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.ace-responsive-menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.ace-responsive-menu li ul {
+    display: none;
+}
+
+.ace-responsive-menu>li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.ace-responsive-menu li a {
+    color: #c0c0c0;
+}
+
+.ace-responsive-menu>li>a {
+    display: block;
+    position: relative;
+    margin: 0;
+    border: 0;
+    padding: 18px 20px 18px 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+    color: #c0c0c0;
+}
+
+.ace-responsive-menu li a i {
+    padding-right: 5px;
+    color: #FF5737;
+}
+
+.ace-responsive-menu>li>a i {
+    font-size: 16px;
+    text-shadow: none;
+    color: #FF5737;
+}
+
+.ace-responsive-menu li.menu-active>a {
+    background: #272727;
+    color: #fff;
+}
+
+.ace-responsive-menu li .menu-active {
+    position: relative;
+}
+
+.ace-responsive-menu>li>a>.arrow:before {
+    margin-left: 15px;
+    display: inline;
+    font-size: 16px;
+    font-family: FontAwesome;
+    height: auto;
+    content: " \276F";
+    font-weight: 300;
+    text-shadow: none;
+    width: 10px;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+ul[data-menu-style="accordion"] {
+    width: 250px;
+}
+
+ul[data-menu-style="accordion"]>li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    float: none !important;
+}
+
+ul[data-menu-style="accordion"]>li:first-child {
+    border-top: 2px solid #FD5025;
+}
+
+ul[data-menu-style="accordion"]>li>a>.arrow:before {
+    float: right;
+    content: "\f105";
+}
+
+ul[data-menu-style="accordion"] li.menu-active>a>.arrow:before {
+    content: "\f107" !important;
+}
+
+ul[data-menu-style="accordion"]>li>a i {
+    padding-right: 10px;
+    color: #FF5737;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('The Rockin Melodies.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-shadow: none;
+    color: #0d638f;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fb-share-button {
+    width: 60px;
+    height: 30px;
+    margin-left: 10px;
+    top: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.fb-share-button a {
+    color: white;
+    font-size: small;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 100px;
+    text-decoration: underline;
+    font-weight: bolder;
+    position: absolute;
+    top: 220px;
+    left: 450px;
+    font-family: Anton;
+    color: #fff;
+}
+
+.boekingen-button {
+    text-align: center;
+    font-size: 15px;
+    text-decoration: underline;
+    font-weight: bolder;
+    position: absolute;
+    top: 420px;
+    left: 870px;
+    font-family: Anton;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    width: 99.5%;
+    height: 20px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    bottom: 0px;
+    position: absolute;
+}
+
+p {
+    text-shadow: 4px 4px 10px black;
+    font-weight: bold;
+    position: absolute;
+    bottom: -12px;
+    left: 43%;
+    font-style: italic;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: Black;
+    color: white;
+    text-shadow: 4px 4px 10px green;
+    font-weight: bold;
+    font-style: italic;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#open-email-button {
+    margin-top: 10px;
+}

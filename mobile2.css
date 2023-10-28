@@ -1,0 +1,45 @@
+/* mobile.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('The Rockin Melodies.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-shadow: none;
+    color: #0d638f;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fb-share-button {
+    width: 60px;
+    height: 30px;
+    margin-left: 10px;
+    top: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: absolute; /* Add this line to make it position absolute */
+}
+
+.fb-share-button a {
+    color: white;
+    font-size: small;
+    text-decoration: none;
+}

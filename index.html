@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="The-Rockin-Melodies.ico">
+    <title>The Rockin' Melodies / Country & Golden Oldies</title>
+
+    <!-- Add these meta tags for iOS and Android home screen functionality -->
+    <link rel="apple-touch-icon" href="The Rockin Melodies Mobile.jpg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
+</head>
+
+<body>
+    <nav>
+        <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="last">
+                <a href="contact.html">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span class="title">Contact Us</span>
+                </a>
+            </li>
+            <li>
+                <div class="fb-share-button" data-href="https://therockinmelodies.github.io/" data-layout="button"
+                    data-size="small">
+                    <a target="_blank"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftherockinmelodies.github.io%2F&amp;src=sdkpreparse"
+                        class="fb-xfbml-parse-ignore">Delen</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <h2>The Rockin' Melodies</h2>
+    <button id="boekingenButton" class="boekingen-button">Voor Boekingen Klik Hier</button>
+    <footer>
+        <p>&copy; 2023 The Rockin' Melodies</p>
+    </footer>
+    <script src="jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="ace-responsive-menu.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#respMenu").aceResponsiveMenu({
+                resizeWidth: '768', // Set the same in Media query       
+                animationSpeed: 'fast', //slow, medium, fast
+                accoridonExpAll: false //Expands all the accordion menu on click
+            });
+        });
+    </script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v18.0" nonce="v7elL2a5"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+/* General mobile styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('The Rockin Melodies Phone.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #0d638f;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fb-share-button {
+    width: 3rem;
+    height: 1.5rem;
+    margin-left: 0.625rem;
+    padding: 0.313rem;
+    border-radius: 0.313rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0.219rem;
+    right: 0.625rem;
+}
+
+.fb-share-button a {
+    color: white;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.563rem;
+    text-decoration: underline;
+    font-weight: bold;
+    border-radius: 1.563rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    font-family: 'Anton', sans-serif;
+    color: #000;
+}
+
+.boekingen-button {
+    text-align: center;
+    font-size: 0.625rem;
+    text-decoration: underline;
+    font-weight: bold;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Anton', sans-serif;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    width: 100%;
+    height: 1.25rem;
+    color: white;
+    text-align: center;
+    padding: 0.313rem;
+    bottom: 0;
+    position: absolute;
+}
+
+p {
+    text-shadow: 0.125rem 0.125rem 0.313rem black;
+    font-weight: bold;
+    position: absolute;
+    font-size: 0.875rem;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: italic;
+}
+
+button {
+    padding: 0.313rem 0.625rem;
+    background-color: black;
+    color: white;
+    text-shadow: 0.125rem 0.125rem 0.313rem green;
+    font-weight: bold;
+    font-style: italic;
+    border: none;
+    border-radius: 0.313rem;
+    cursor: pointer;
+    margin: 0.625rem 0;
+    display: block;
+}
+
+/* Media Query for smaller screens (adjust as needed) */
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 1.25rem;
+    }
+    .boekingen-button {
+        font-size: 0.5rem;
+    }
+    /* Add more adjustments for smaller screens */
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="The-Rockin-Melodies.ico">
+    <title>The Rockin' Melodies / Country & Golden Oldies</title>
+
+    <!-- Add these meta tags for iOS and Android home screen functionality -->
+    <link rel="apple-touch-icon" href="The Rockin Melodies Mobile.jpg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="mobile2.css" media="screen and (max-width: 768px)">
+</head>
+
+<body>
+    <nav>
+        <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="last">
+                <a href="contact.html">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span class="title">Contact Us</span>
+                </a>
+            </li>
+            <li>
+                <div class="fb-share-button" data-href="https://therockinmelodies.github.io/"
+                    data-layout="button" data-size="small">
+                    <a target="_blank"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftherockinmelodies.github.io%2F&amp;src=sdkpreparse"
+                        class="fb-xfbml-parse-ignore">Delen</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="contact-form">
+        <h2>Boekingen & Info</h2>
+        <p>Wilt u The Rockin' Melodies boeken? Dat kan via onderstaand formulier. Na het versturen van uw aanvraag nemen
+            wij contact met u op. Uw boeking van The Rockin' Melodies wordt dan definitief.</p>
+        <form id="contact-form">
+            <input type="hidden" name="contact_number">
+            <label for="company_name">Bedrijfs Naam</label>
+            <input type="text" id="company_name" name="company_name" required>
+            <label for="first_name">Voornaam</label>
+            <input type="text" id="first_name" name="first_name" required>
+            <label for="last_name">Achternaam</label>
+            <input type="text" id="last_name" name="last_name" required>
+            <label for="phone">Telefoonnummer</label>
+            <input type="tel" id="phone" name="phone">
+            <label for="email">E-mailadres</label>
+            <input type="email" id="email" name="email" required>
+            <label for="genre">Welk muziek genre wenst u</label>
+            <select id="genre" name="genre">
+                <option value="country_rock">Country (rock)</option>
+                <option value="country_golden_oldies">Country & Golden Oldies</option>
+                <option value="golden_oldies">Golden Oldies</option>
+            </select>
+            <label for="event_type">Openbaar of besloten</label>
+            <select id="event_type" name="event_type">
+                <option value="openbaar">Openbaar</option>
+                <option value="besloten">Besloten</option>
+            </select>
+            <label for="event_time">Aanvang uur optreden / tot</label>
+            <input type="text" id="event_time" name="event_time">
+            <label for="event_date">Datum optreden</label>
+            <input type="date" id="event_date" name="event_date">
+            <label for="message">Heeft u nog vragen, dan kunt u die hier stellen</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <label for="email_provider">
+                Kies een e-mailprovider:</label>
+            <select id="email_provider" name="email_provider">
+                <option value="Device Mail">Open in Apparaat Mail</option>
+                <option value="gmail">Open in Gmail</option>
+                <option value="outlook">Open in Outlook</option>
+            </select>
+
+            <input type="button" value="Aanvraag Versturen" id="open-email-button" style="margin-top: 10px;">
+        </form>
+        <p id="success-message" style="display: none;">Email sent successfully.</p>
+    </div>
+
+    <script src="jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="ace-responsive-menu.js" type="text/javascript"></script>
+    <script>
+        document.getElementById('open-email-button').addEventListener('click', function () {
+            const recipientEmail = 'therockinmelodies@gmail.com'; // Replace with your email
+            const subject = 'Contact Request'; // You can customize the subject
+            const company_name = document.getElementById('company_name').value;
+            const first_name = document.getElementById('first_name').value;
+            const last_name = document.getElementById('last_name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const genre = document.getElementById('genre').value;
+            const event_type = document.getElementById('event_type').value;
+            const event_time = document.getElementById('event_time').value;
+            const event_date = document.getElementById('event_date').value;
+            const user_message = document.getElementById('message').value;
+
+            const emailProvider = document.getElementById('email_provider').value;
+
+            // Create the email message
+            const message = `Bedrijfs Naam: ${company_name}\n\n` +
+                            `Voornaam: ${first_name}\n\n` +
+                            `Achternaam: ${last_name}\n\n` +
+                            `Telefoonnummer: ${phone}\n\n` +
+                            `E-mailadres: ${email}\n\n` +
+                            `Genre: ${genre}\n\n` +
+                            `Event Type: ${event_type}\n\n` +
+                            `Aanvang uur optreden / tot: ${event_time}\n\n` +
+                            `Datum optreden: ${event_date}\n\n` +
+                            `Bericht: ${user_message}\n\n`;
+
+            if (emailProvider === 'Device Mail') {
+                // Open the default email client with the mailto URL
+                const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+                window.location.href = mailtoUrl;
+            } else if (emailProvider === 'gmail') {
+                // Open Gmail in a new tab
+                window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`);
+            } else if (emailProvider === 'outlook') {
+                // Open Outlook in a new tab
+                window.open(`https://outlook.live.com/owa/?path=/mail/action/compose&to=${recipientEmail}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`);
+            }
+
+            // Reset the form after clicking "Open Email"
+            document.getElementById('contact-form').reset();
+        });
+    </script>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v18.0" nonce="v7elL2a5"></script>
+</body>
+
+</html>
