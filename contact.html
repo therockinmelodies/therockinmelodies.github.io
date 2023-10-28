@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
     <link rel="icon" type="image/x-icon" href="The-Rockin-Melodies.ico">
     <title>The Rockin' Melodies / Country & Golden Oldies</title>
 
@@ -34,8 +35,8 @@
                 </a>
             </li>
             <li>
-                <div class="fb-share-button" data-href="https://therockinmelodies.github.io/"
-                    data-layout="button" data-size="small">
+                <div class="fb-share-button" data-href="https://therockinmelodies.github.io/" data-layout="button"
+                    data-size="small">
                     <a target="_blank"
                         href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftherockinmelodies.github.io%2F&amp;src=sdkpreparse"
                         class="fb-xfbml-parse-ignore">Delen</a>
@@ -62,10 +63,10 @@
             <input type="email" id="email" name="email" required>
             <label for="plaats">Plaats</label>
             <input type="plaats" id="plaats" name="plaats" required>
-            <label id="genre" for="genre">Welk muziek genre wenst u</label>
-            <select id="genre" name="genre">
+            <label for="music_genre">Welk muziek genre wenst u</label>
+            <select id="music_genre" name="genre">
                 <option value="Country Rock">Country (rock)</option>
-                <option value="Country En Golden Oldies">Country & Golden Oldies</option>
+                <option value="Country & Golden Oldies">Country & Golden Oldies</option>
                 <option value="Golden Oldies">Golden Oldies</option>
             </select>
             <label for="event_type">Openbaar of besloten</label>
@@ -79,7 +80,7 @@
             <input type="date" id="event_date" name="event_date">
             <label for="message">Heeft u nog vragen, dan kunt u die hier stellen</label>
             <textarea id="message" name="message" required></textarea>
-            
+
             <label for="email_provider">
                 Kies een e-mailprovider:</label>
             <select id="email_provider" name="email_provider">
@@ -105,7 +106,7 @@
             const phone = document.getElementById('phone').value;
             const email = document.getElementById('email').value;
             const plaats = document.getElementById('plaats').value;
-            const genre = document.getElementById('genre').value;
+            const genre = document.getElementById('music_genre').value; // Updated the ID to "music_genre"
             const event_type = document.getElementById('event_type').value;
             const event_time = document.getElementById('event_time').value;
             const event_date = document.getElementById('event_date').value;
@@ -115,26 +116,32 @@
 
             // Create the email message
             const message = `Bedrijfs Naam: ${company_name}\n\n` +
-                            `Voornaam: ${first_name}\n\n` +
-                            `Achternaam: ${last_name}\n\n` +
-                            `Telefoonnummer: ${phone}\n\n` +
-                            `E-mailadres: ${email}\n\n` +
-                            `Plaats: ${plaats}\n\n` +
-                            `Genre: ${genre}\n\n` +
-                            `Event Type: ${event_type}\n\n` +
-                            `Aanvang uur optreden / tot: ${event_time}\n\n` +
-                            `Datum optreden: ${event_date}\n\n` +
-                            `Bericht: ${user_message}\n\n`;
+                `Voornaam: ${first_name}\n\n` +
+                `Achternaam: ${last_name}\n\n` +
+                `Telefoonnummer: ${phone}\n\n` +
+                `E-mailadres: ${email}\n\n` +
+                `Plaats: ${plaats}\n\n` +
+                `Genre: ${genre}\n\n` +
+                `Event Type: ${event_type}\n\n` +
+                `Aanvang uur optreden / tot: ${event_time}\n\n` +
+                `Datum optreden: ${event_date}\n\n` +
+                `Bericht: ${user_message}\n\n`;
 
             if (emailProvider === 'Device Mail') {
+                // Encode the message and subject
+                const encodedMessage = encodeURIComponent(message);
+                const encodedSubject = encodeURIComponent(subject);
+
                 // Open the default email client with the mailto URL
-                const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+                const mailtoUrl = `mailto:${recipientEmail}?subject=${encodedSubject}&body=${encodedMessage}`;
                 window.location.href = mailtoUrl;
             } else if (emailProvider === 'gmail') {
                 // Open Gmail in a new tab
+                const mailtoUrl = `mailto:${recipientEmail}?subject=${subject}&body=${message}`;
                 window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`);
             } else if (emailProvider === 'outlook') {
                 // Open Outlook in a new tab
+                const mailtoUrl = `mailto:${recipientEmail}?subject=${subject}&body=${message}`;
                 window.open(`https://outlook.live.com/owa/?path=/mail/action/compose&to=${recipientEmail}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`);
             }
 
@@ -142,10 +149,9 @@
             document.getElementById('contact-form').reset();
         });
     </script>
-
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v18.0" nonce="v7elL2a5"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v18.0"
+        nonce="v7elL2a5"></script>
 </body>
 
 </html>
