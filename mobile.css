@@ -123,6 +123,14 @@ button {
     margin: auto;
 }
 
+.facebook-container img {
+    max-width: 35px;
+    height: 35px;
+    display: block;
+    padding: 13px;
+    margin: auto;
+}
+
 .social-icons .phone-container p {
     left: 38px;
 }
