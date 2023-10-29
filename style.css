@@ -6,6 +6,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
 a {
@@ -227,4 +228,12 @@ button {
 
 #open-email-button {
     margin-top: 10px;
+}
+
+.social-icons {
+    display: none;
+}
+
+.logotrm {
+    display: none;
 }

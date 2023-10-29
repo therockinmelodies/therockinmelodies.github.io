@@ -23,13 +23,15 @@
     <nav>
         <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
             <li>
-                <a href="index.html">
+                <a target="_blank" 
+                    href="index.html">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <span class="title">Home</span>
                 </a>
             </li>
             <li class="last">
-                <a href="contact.html">
+                <a target="_blank"
+                    href="contact.html">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                     <span class="title">Contact Us</span>
                 </a>
@@ -74,10 +76,10 @@
                 <option value="openbaar">Openbaar</option>
                 <option value="besloten">Besloten</option>
             </select>
-            <label for="event_time">Aanvang uur optreden / tot</label>
-            <input type="text" id="event_time" name="event_time">
             <label for="event_date">Datum optreden</label>
             <input type="date" id="event_date" name="event_date">
+            <label for="event_time">Aanvang uur optreden / tot</label>
+            <input type="text" id="event_time" name="event_time">
             <label for="message">Heeft u nog vragen, dan kunt u die hier stellen</label>
             <textarea id="message" name="message" required></textarea>
 
@@ -123,8 +125,8 @@
                 `Plaats: ${plaats}\n\n` +
                 `Genre: ${genre}\n\n` +
                 `Event Type: ${event_type}\n\n` +
-                `Aanvang uur optreden / tot: ${event_time}\n\n` +
                 `Datum optreden: ${event_date}\n\n` +
+                `Aanvang uur optreden / tot: ${event_time}\n\n` +
                 `Bericht: ${user_message}\n\n`;
 
             if (emailProvider === 'Device Mail') {
