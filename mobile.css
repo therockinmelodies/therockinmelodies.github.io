@@ -6,6 +6,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    overflow: hidden;
     font-family: Arial, sans-serif;
     color: #fff;
 }
@@ -44,18 +45,7 @@ ul {
 }
 
 h2 {
-    text-align: center;
-    font-size: 1.563rem;
-    text-decoration: underline;
-    font-weight: bold;
-    border-radius: 1.563rem;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    background-color: #fff;
-    transform: translate(-50%, -50%);
-    font-family: 'Anton', sans-serif;
-    color: #000;
+    display: none;
 }
 
 .boekingen-button {
@@ -107,13 +97,105 @@ button {
     display: block;
 }
 
-/* Media Query for smaller screens (adjust as needed) */
-@media screen and (max-width: 768px) {
-    h2 {
-        font-size: 1.25rem;
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 1px;
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.social-icons a {
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    max-width: 30px;
+    height: auto;
+    display: block;
+    padding: 15px;
+    margin: auto;
+}
+
+.social-icons .phone-container p {
+    left: 38px;
+}
+
+.social-icons .email-container p {
+    left: 138px;
+}
+
+.social-icons .facebook-container p {
+    left: 238px;
+}
+
+.social-icons .whatsapp-container p {
+    left: 338px;
+}
+
+/* Media query for larger screens (adjust as needed) */
+@media screen and (min-width: 896px) {
+
+    /* General mobile styles */
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('The Rockin Melodies Phone.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        color: #fff;
     }
-    .boekingen-button {
-        font-size: 0.5rem;
+
+    .social-icons {
+        display: flex;
+        justify-content: space-between;
+        background-color: #000;
+        padding: 1px;
+        position: fixed;
+        overflow: hidden;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
     }
-    /* Add more adjustments for smaller screens */
+
+    .social-icons a {
+        text-align: center;
+        color: #fff;
+        padding: 5px;
+        text-decoration: none;
+    }
+
+    .social-icons img {
+        max-width: 30px;
+        height: auto;
+        display: block;
+        padding: 15px;
+        margin: auto;
+    }
+
+    .social-icons .phone-container p {
+        left: 38px;
+    }
+
+    .social-icons .email-container p {
+        left: 150px;
+    }
+
+    .social-icons .facebook-container p {
+        left: 265px;
+    }
+
+    .social-icons .whatsapp-container p {
+        left: 370px;
+    }
 }
