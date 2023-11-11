@@ -100,15 +100,28 @@ button {
     text-decoration: none;
 }
 
-.social-icons img {
-    max-width: 30px;
-    height: auto;
+.phone-container img {
+    max-width: 35px;
+    height: 35px;
     display: block;
-    padding: 15px;
+    padding: 13px;
     margin: auto;
 }
-
+.email-container img {
+    max-width: 27px;
+    height: 27px;
+    display: block;
+    padding: 17px;
+    margin: auto;
+}
 .facebook-container img {
+    max-width: 35px;
+    height: 35px;
+    display: block;
+    padding: 13px;
+    margin: auto;
+}
+.whatsapp-container img {
     max-width: 35px;
     height: 35px;
     display: block;
