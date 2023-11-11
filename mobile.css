@@ -24,23 +24,13 @@ ul {
     align-items: center;
 }
 
-.fb-share-button {
-    width: 3rem;
-    height: 1.5rem;
-    margin-left: 0.625rem;
-    padding: 0.313rem;
-    border-radius: 0.313rem;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0.8rem;
-    right: 0.625rem;
+ul li {
+    margin-right: 10px; /* Adjust as needed */
 }
 
-.fb-share-button a {
-    color: white;
-    font-size: 0.875rem;
-    text-decoration: none;
+.fb-share-button {
+    position: relative;
+    align-items: center;
 }
 
 h2 {
@@ -186,9 +176,19 @@ button {
         max-width: 30px;
         height: auto;
         display: block;
-        padding: 16px;
+        padding: 15px;
         margin: auto;
+        filter: brightness(1); /* Adjust brightness to maintain original colors */
     }
+    
+    /* Add vendor-specific prefixes for filter property */
+    .social-icons img {
+        -webkit-filter: brightness(1);
+        -moz-filter: brightness(1);
+        -o-filter: brightness(1);
+        -ms-filter: brightness(1);
+        filter: brightness(1);
+    }    
 
     .social-icons .phone-container p {
         left: 38px;
@@ -206,22 +206,11 @@ button {
         left: 370px;
     }
 
-    .fb-share-button {
-    width: 3rem;
-    height: 1.5rem;
-    margin-left: 0.625rem;
-    padding: 0.313rem;
-    border-radius: 0.313rem;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0.8rem;
-    right: 0.625rem;
-}
+    ul {
+        justify-content: flex-end; /* Align items to the right on larger screens */
+    }
 
-.fb-share-button a {
-    color: white;
-    font-size: 0.875rem;
-    text-decoration: none;
-}
+    .fb-share-button {
+        margin-left: 10px; /* Adjust as needed */
+    }
 }

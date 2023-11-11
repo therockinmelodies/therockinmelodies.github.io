@@ -39,14 +39,6 @@
                     <span class="title">Contact Us</span>
                 </a>
             </li>
-            <li>
-                <div class="fb-share-button" data-href="https://therockinmelodies.github.io/" data-layout="button"
-                    data-size="small">
-                    <a target="_blank"
-                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftherockinmelodies.github.io%2F&amp;src=sdkpreparse"
-                        class="fb-xfbml-parse-ignore">Delen</a>
-                </div>
-            </li>
         </ul>
     </nav>
 
@@ -57,15 +49,15 @@
         <form id="contact-form">
             <input type="hidden" name="contact_number">
             <label for="company_name">Bedrijfs Naam</label>
-            <input type="text" id="company_name" name="company_name">
+            <input type="text" id="company_name" name="company_name" placeholder="Vul hier uw Bedrijfs Naam in.">
             <label for="first_name">Voornaam</label>
-            <input type="text" id="first_name" name="first_name">
+            <input type="text" id="first_name" name="first_name" placeholder="Vul hier uw Voornaam in.">
             <label for="last_name">Achternaam</label>
-            <input type="text" id="last_name" name="last_name">
+            <input type="text" id="last_name" name="last_name" placeholder="Vul hier uw Achternaam in.">
             <label for="phone">Telefoonnummer</label>
-            <input type="tel" id="phone" name="phone">
+            <input type="tel" id="phone" name="phone" placeholder="Vul hier uw Telefoonnummer in.">
             <label for="email">E-mailadres <sup style="color:red">*</sup></label>
-            <input type="email" id="email" name="email" required oninvalid="this.setCustomValidity('Vul dit veld in.')"
+            <input type="email" id="email" name="email" placeholder="Vul hier uw E-mailadres in." required oninvalid="this.setCustomValidity('Vul dit veld in.')"
                 oninput="this.setCustomValidity('')">
             <label for="music_genre">Welk muziek genre wenst u</label>
             <select id="music_genre" name="genre">
@@ -81,11 +73,11 @@
             <label for="event_date">Datum optreden</label>
             <input type="date" id="event_date" name="event_date">
             <label for="event_time">Aanvang uur optreden / tot</label>
-            <input type="text"  id="event_time" name="event_time" placeholder="Vul hier uw tijd in bijv 19:00 tot 23:00">
+            <input type="text"  id="event_time" name="event_time" placeholder="Vul hier uw tijd in bijv 19:00 tot 23:00.">
             <label for="plaats">Locatie Optreden</label>
-            <input type="plaats" id="plaats" name="plaats">
+            <input type="plaats" id="plaats" name="plaats" placeholder="Vul hier de locatie in voor de optreden.">
             <label for="message">Heeft u nog vragen, dan kunt u die hier stellen</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea id="message" name="message" placeholder="Uw kunt hier wat invullen voor eventuele vragen."></textarea>
 
             <label for="email_provider">
                 Kies een e-mailprovider:</label>
