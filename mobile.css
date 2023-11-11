@@ -27,6 +27,8 @@ ul {
 .fb-share-button {
     position: center;
     align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 h2 {
