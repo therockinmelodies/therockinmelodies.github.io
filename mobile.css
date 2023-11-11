@@ -25,10 +25,7 @@ ul {
 }
 
 .fb-share-button {
-    position: center;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    display: none;
 }
 
 h2 {
