@@ -25,3 +25,22 @@ ul {
     justify-content: center;
     align-items: center;
 }
+
+.fb-share-button {
+    width: 3rem;
+    height: 1.5rem;
+    margin-left: 0.625rem;
+    padding: 0.313rem;
+    border-radius: 0.313rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.625rem;
+}
+
+.fb-share-button a {
+    color: white;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
