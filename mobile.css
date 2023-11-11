@@ -24,7 +24,7 @@ ul {
     align-items: center;
 }
 
-.fb-share-button {
+ul .fb-share-button {
     display: none;
 }
 
@@ -206,6 +206,6 @@ button {
     }
 
     .fb-share-button {
-        margin-left: 10px; /* Adjust as needed */
+        display: none;
     }
 }
