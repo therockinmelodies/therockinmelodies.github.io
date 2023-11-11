@@ -24,13 +24,8 @@ ul {
     align-items: center;
 }
 
-ul li {
-    margin-right: 10px; /* Adjust as needed */
-}
-
 .fb-share-button {
-    position: relative;
-    align-items: center;
+    position: center;
 }
 
 h2 {
